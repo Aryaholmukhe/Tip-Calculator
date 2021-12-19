@@ -1,0 +1,195 @@
+*{
+    font-family: 'Space Mono', monospace;
+    overflow: hidden;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: #cdf0f0;
+    /* width: 100vw; */
+    height: 100vh;
+}
+
+#forCenter{
+    height: 100vh;
+    width: 100%;
+}
+.splitter{
+    margin-top: 5%;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.mainDiv{
+    background-color: white;
+    width: 65%;
+    height: 60%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-around;
+    box-shadow: hsla(183, 100%, 15%, 0.37) 10px 10px 50px;
+}
+
+.inputs{
+    width: 30%;
+    padding: 5%;
+    flex-grow: 1;
+}
+.results{
+    background-color: #05454c;
+    color: white;
+    height: 87%;
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 5%;
+    /* overflow: hidden; */
+    margin: 3%;
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+input{
+    width: 100%;
+    padding: 3%;
+    border: none;
+    background-color: #f4f8fa;
+    text-align: right;
+}
+::placeholder{
+    background-color: #f4f8fa;
+    color: #587470;
+    font-weight:bolder;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+button:not(#reset){
+    background-color: #05454c;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    border: none;
+  width:25%;
+  height: 35px;
+    border-radius: 3px;
+  flex-grow:1;
+  margin: 2%;
+  /* pointer-events: none; */
+}
+#customButton{
+    background-color: #f4f8fa;
+    color: #05454c;
+    min-width: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+    color: #05454c;
+    border: none;
+  width:25%;
+  flex-grow:1;
+  margin: 2%;
+  padding: 0;
+    border-radius: 3px;
+}
+.btns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+i{
+    position: absolute;
+    padding: 0.8%;
+}
+
+
+.money{
+    color: #29c1ae;
+    font-size: 35px;
+}
+.text{
+    margin-bottom: 0;
+}
+.resultperPerson{
+    font-size: 15px;
+    margin-top: 0;
+    color: #639194;
+}
+.resultDiv{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    padding: 10%;
+    padding-top: 15%;
+    font-size: small;
+    text-align: left;
+}
+.resultDiv:first-child{
+    padding-bottom: 0;
+}
+.resultDiv:nth-child(2){
+    padding-top: 0;
+}
+#reset{
+    width: 80%;
+    background-color: #29c1ae;
+    color: #05454c;
+    border: none;
+    border-radius: 5px;
+    height: 10%;
+    font-size: large;
+}
+
+/* for responsive */
+/* Not really working well */
+@media screen and (max-width: 830px){
+    *{
+        overflow:visible;
+    }
+    .mainDiv{
+        width: 95%;
+    }
+    .resultDiv{
+        padding-top: 5%;
+    }
+    button:not(#reset){
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body{
+        margin: 0;
+    }
+    .mainDiv{
+        width: 100%;
+        height: 87%;
+        flex-direction: column;
+    }
+    .inputs{
+        width: 85%;
+        height: 35%;
+    }
+    .results{
+        width: 90%;
+        height: 20%;
+    }
+    
+    .resultDiv{
+        padding-top: 0%;
+    }
+}
+@media screen and (max-width: 350px){
+    .inputs{
+        width: 85%;
+        height: 10%;
+        margin-bottom: 2%;
+    }
+    .results{
+        width: 90%;
+        height: 0;
+    }
+}
