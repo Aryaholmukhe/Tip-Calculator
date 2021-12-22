@@ -108,7 +108,7 @@ i{
 
 .money{
     color: #29c1ae;
-    font-size: 35px;
+    font-size: 30px;
 }
 .text{
     margin-bottom: 0;
@@ -140,7 +140,11 @@ i{
     border: none;
     border-radius: 5px;
     height: 10%;
+    margin: auto;
     font-size: large;
+    position:static;
+    margin-top: 20%;
+    float:bottom;
 }
 
 /* for responsive */
@@ -157,6 +161,9 @@ i{
     }
     button:not(#reset){
         width: 30%;
+    }
+    #reset{
+        margin-top: 0;
     }
 }
 
@@ -191,5 +198,13 @@ i{
     .results{
         width: 90%;
         height: 0;
+    }
+    #results{
+        height: 20%;
+    }
+}
+@media screen and (max-width: 250px){
+    .money{
+        margin: 0;
     }
 }
